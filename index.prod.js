@@ -1,5 +1,6 @@
 /**
- * @file 主入口
+ * @file 生产环境主入口
+ * @deprecated 暂时好像和开发入口一样，之后再看
  * @author wangyisheng@baidu.com (wangyisheng)
  */
 

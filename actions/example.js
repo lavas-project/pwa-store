@@ -15,11 +15,12 @@ module.exports = {
 
     // 获取路由动态参数
     // /api/example 配上 routerPath = '/api/:name' 的话 => {name: example}
-    let params = ctx.params
+    // let params = ctx.params
 
     ctx.body = {
       message: 'This is example action',
-      query
+      query,
+      a: 2
     }
   }
 }
