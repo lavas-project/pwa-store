@@ -19,8 +19,7 @@ module.exports = {
 
     ctx.body = {
       message: 'This is example action',
-      query,
-      a: 2
+      query
     }
   }
 }
