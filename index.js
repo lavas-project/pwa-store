@@ -8,8 +8,7 @@ const Router = require('koa-router')
 const glob = require('glob')
 
 const {PORT} = require('./config/server')
-const getRouterPath = require('./utils/getRouterPath')
-const log = require('./utils/log')
+const {getRouterPath, log} = require('./utils/framework')
 
 const app = new Koa()
 const router = new Router()
