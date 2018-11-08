@@ -45,7 +45,7 @@ let webpackConfig = {
       {
         test: /\.less$/,
         use: [
-          'vue-style-loader',
+          isProd ? MiniCssExtractPlugin.loader : 'vue-style-loader',
           'css-loader',
           'less-loader'
         ]
@@ -91,9 +91,9 @@ let webpackConfig = {
   // 配置静态服务器
   devServer: {
     contentBase: './dist',
-    host: 'localhost',      // 默认是localhost
-    port: 8000,             // 端口号
-    // open: true,             // 自动打开浏览器
+    host: 'localhost',
+    port: 8000,
+    stats: 'minimal'
   }
 }
 
