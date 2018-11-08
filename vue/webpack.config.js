@@ -68,14 +68,6 @@ let webpackConfig = {
             }
           }
         ]
-      },
-      {
-        test: /\.html$/,
-        use: 'html-withimg-loader' // 找出 HTML 中的 <img>
-      },
-      {
-        test: /\.(eot|ttf|woff|svg)$/,
-        use: 'file-loader' // 找出字体文件
       }
     ]
   },
