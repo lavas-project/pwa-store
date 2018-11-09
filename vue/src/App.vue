@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img class="app-image" src="http://boscdn.bpc.baidu.com/assets/mip/codelab/shell/mashroom.jpg">
     <router-view/>
   </div>
 </template>
@@ -19,5 +19,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .app-image {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
 }
 </style>

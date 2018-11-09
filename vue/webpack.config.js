@@ -15,12 +15,14 @@ const resolvePath = inputPath => path.join(__dirname, inputPath)
 
 let webpackConfig = {
   mode: isProd ? 'production' : 'development',
+  stats: 'minimal',
   entry: {
-    app: './src/main.js'
+    app: [resolvePath('./src/main.js')]
   },
   output: {
     filename: '[name].[hash:8].js',
-    path: resolvePath('dist')
+    path: isProd ? resolvePath('../vue-dist') : resolvePath('dist'),
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -77,22 +79,15 @@ let webpackConfig = {
 
     // 输出 index.html 到 output
     new HtmlwebpackPlugin({
-      template: 'index.html'
+      template: resolvePath('index.html')
     })
-  ],
-  // 配置静态服务器
-  devServer: {
-    contentBase: './dist',
-    host: 'localhost',
-    port: 8000,
-    stats: 'minimal'
-  }
+  ]
 }
 
 if (isProd) {
   webpackConfig.plugins.push(
-    // 每次 build 清空 dist 目录
-    new CleanWebpackPlugin('dist')
+    // 每次 build 清空 output 目录
+    new CleanWebpackPlugin(resolvePath('../vue-dist'))
   )
   webpackConfig.plugins.push(
     // 分离单独的 CSS 文件到 output

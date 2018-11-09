@@ -1,10 +1,10 @@
 <template>
   <div class="index">
-    <h1>{{ message }}</h1>
+    <h2>{{ message }}</h2>
     <button @click="getNewMessage()">Get New Message</button>
     <hello-world></hello-world>
     <div class="wrapper">
-      <div class="author">Eason Wang</div>
+      <router-link to="/detail/1" class="author">Wang Yisheng</router-link>
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-h1, h2 {
+h2 {
   font-weight: normal;
 }
 .wrapper {
