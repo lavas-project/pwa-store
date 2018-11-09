@@ -23,6 +23,7 @@
   "homepage": "https://github.com/lavas-project/pwa-store#readme",
   "dependencies": {
     "@babel/runtime": "^7.1.5",
+    "axios": "^0.18.0",
     "chalk": "^2.4.1",
     "glob": "^7.1.3",
     "koa": "^2.6.1",

@@ -81,7 +81,12 @@ let webpackConfig = {
     new HtmlwebpackPlugin({
       template: resolvePath('index.html')
     })
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 }
 
 if (isProd) {

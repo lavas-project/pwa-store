@@ -18,7 +18,7 @@ module.exports = {
     // let params = ctx.params
 
     ctx.body = {
-      message: 'This is example action',
+      message: 'Greeting from node action',
       query
     }
   }

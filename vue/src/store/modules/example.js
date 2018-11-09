@@ -23,7 +23,12 @@ const actions = {
   },
 
   async getNewMessage ({commit}) {
-    let result = await get('/api/example?a=1&b=2')
+    let result = await get('/api/example', {
+      params: {
+        a: 1,
+        b: 2
+      }
+    })
     commit('setMessage', result.message)
   }
 }

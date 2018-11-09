@@ -3,12 +3,9 @@
  * @author wangyisheng@baidu.com (wangyisheng)
  */
 
-// import axios from 'axios'
+import axios from 'axios'
 
-export async function get (url) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve({message: 'Greeting from request'})
-    }, 500)
-  })
+export async function get (url, options) {
+  let response = await axios.get(url, options)
+  return response.data
 }
